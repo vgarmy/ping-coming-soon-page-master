@@ -30,30 +30,32 @@ function App() {
 
   return (
     <div role="main" className="h-screen w-full flex flex-col items-center justify-start pt-[4rem]">
-      <div className="w-full max-w-[39.6rem] text-center flex flex-col items-center">
+      <div className="w-full max-w-[39.6rem] text-center flex flex-col items-center p-4 md:p-0">
         <img src={logo} className="mx-auto mb-[3rem]" />
-        <h1 className='text-6xl font-light text-[var(--Gray)] mb-[1.5rem]'>
+        <h1 className='text-2xl md:text-6xl font-light text-[var(--Gray)] mb-[1.5rem]'>
           We are launching <span className='font-bold text-[var(--Very-Dark-Blue)]'>soon!</span>
         </h1>
-        <p className='text-[1.75rem] text-[var(--Very-Dark-Blue)] mb-[2.7rem]'>Subscribe and get notified</p>
+        <p className='text-[1rem] md:text-[1.75rem] text-[var(--Very-Dark-Blue)] mb-[2.7rem]'>Subscribe and get notified</p>
         <form onSubmit={handleSubmit} className="w-full relative mb-[5rem]">
-          <div className="flex items-center gap-4 w-full mb-[0.2rem] relative">
+          <div className="flex flex-col md:flex-row items-center gap-4 w-full mb-[0.2rem] relative">
             <input
-              type="email"
+              type="text"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
-              className={`w-full h-12 px-5 border rounded-full text-base ${error ? "border-red-500" : "border-gray-300"
+              placeholder="example@email.coml"
+              className={`w-full h-10 md:h-12 px-5 border rounded-full text-sm md:text-base ${error ? "border-red-500" : "border-[var(--Blue)]"
                 }`}
             />
             <button
               type="submit"
-              className="h-12 bg-[var(--Blue)] text-white px-6 rounded-full shadow-2xl font-semibold whitespace-nowrap flex-shrink-0 cursor-pointer"
+              className="w-full md:w-auto h-10 md:h-12 bg-[var(--Blue)] text-sm md:text-base text-white px-6 rounded-full shadow-2xl font-semibold whitespace-nowrap flex-shrink-0 cursor-pointer"
             >
               Notify Me
             </button>
           </div>
-          <p className={`text-red-500 text-xs text-start ml-6 absolute left-0 top-[3.2rem] ${error ? "block" : "hidden"}`}>
+          <p
+            className={`text-red-500 text-xs ml-0 md:ml-6 absolute top-[6.2rem] md:top-[3.2rem] w-full text-center md:text-start ${error ? "block" : "hidden"}`}
+          >
             {error}
           </p>
         </form>
