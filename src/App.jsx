@@ -31,7 +31,7 @@ function App() {
   return (
     <div role="main" className="h-screen w-full flex flex-col items-center justify-start pt-[4rem]">
       <div className="w-full max-w-[39.6rem] text-center flex flex-col items-center p-4 md:p-0">
-        <img src={logo} className="mx-auto mb-[3rem]" />
+        <img src={logo} className="mx-auto mb-[3rem]" alt="loge"/>
         <h1 className='text-2xl md:text-4xl font-light text-[var(--Gray)] mb-[1.5rem]'>
           We are launching <span className='font-bold text-[var(--Very-Dark-Blue)]'>soon!</span>
         </h1>
@@ -59,7 +59,7 @@ function App() {
             {error}
           </p>
         </form>
-        <img src={dashboard} className="mx-auto mb-[3.5rem]" />
+        <img src={dashboard} className="mx-auto mb-[3.5rem]" alt="dashboard"/>
         <div className='flex flex-row gap-4 mb-[2.5rem]'>
           <div className="h-6 w-6 border border-[var(--Gray)] rounded-full flex items-center justify-center hover:bg-[var(--Blue)] text-[var(--Blue)] hover:text-white cursor-pointer">
             <FontAwesomeIcon icon={faFacebookF} className="text-xs" />
